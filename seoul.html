@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>WMW - World Minimum Wage in 2021</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://rawgit.com/jquery/jquery-mousewheel/master/jquery.mousewheel.js"></script>
+
+	<style type="text/css">
+		head, html, section, footer{margin:0;
+			/*overflow-y: hidden;*/}
+		div{margin: 0; /*overflow-y: hidden;*/}
+		body{margin:0; /*overflow-y: hidden;*/}
+		html{background:#1A1A1A;}
+		a{display:block; width: 6vw; height: 5vh; z-index: 30;}
+		h1{color:#999999;
+			font-family: 'Space Grotesk', sans-serif;
+			font-weight: 300;
+			font-size: 1vw;
+			text-align: left;
+			/*line-height: 5vh;*/
+			letter-spacing: -0.05vw;
+			/*margin-top: 4.8vh;*/
+			margin-right: 4vw;
+			margin-bottom: 0.5vw;}
+		h2{color:#F2F2F2;
+			font-family: 'Space Grotesk', sans-serif;
+			font-weight: 400;
+			font-size: 3.3vw;
+			text-align: right;
+			line-height: 6vh;
+			letter-spacing: 0vw;
+			/*margin-top: 0.5vh;*/
+			margin-right: 0vw;
+			margin-bottom: 0.5vw;}
+		h3{color:#F2F2F2;
+			font-family: 'Space Grotesk', sans-serif;
+			font-weight: 400;
+			font-size: 1.6vw;
+			text-align: left;
+			letter-spacing: -0.1vw;
+			width: 17vw;
+			/*margin-top: 3vh;*/
+			margin-left: 0vw;
+			margin-bottom: 0vw;}
+		h4{color:#11A79B;
+			font-family: 'Space Grotesk', sans-serif;
+			font-weight: 400;
+			font-size: 8vw;
+			text-align: center;
+			letter-spacing: -0.1vw;
+			width: 7.5vw;
+			margin-top: -3vh;
+			margin-left: 0vw;
+			margin-bottom: -1vw;}
+		h5{width: 3vw;}
+		footer{color:#F2F2F2;
+			font-family: 'Space Grotesk', sans-serif;
+			font-weight: 300;
+			font-size: 0.8vw;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			margin-top: 1vh;}
+
+		#header{color:#F2F2F2;
+			font-family: 'Space Grotesk', sans-serif;
+			font-weight: 300;
+			font-size: 10.3vw;
+			margin-left: 2vw;
+			margin-top: 0.5vw;
+			line-height: 10vw;
+			letter-spacing: -0.4vw;
+			text-align: left;
+			/*margin-bottom: 54vw;*/
+			width: 30vw;
+			z-index: 40;
+			 transition: .1s ease; opacity: 1;}
+		#header:hover{color:#F2F2F2; transition: .1s ease; opacity: 0.5;}
+		.subheader{color:#F2F2F2;
+			font-family: 'Space Grotesk', sans-serif;
+			font-weight: 300;
+			font-size: 1vw;
+			line-height: 1vw;
+			text-align: left;
+			top: 2vh; left: 70vw;
+			z-index: 3;}
+		.logo{top: 3vh; left: 88vw;
+			width: 10vw;
+			z-index: 30;}
+
+		section{}
+		.row{/*width: 1500px; height: 440px;*/
+			margin:auto; margin-right: 0vw; margin-bottom: 0vh;
+			display: flex; align-items: flex-end;}
+		.marginright0{margin-right: 0vw;}
+		.margintop{margin-top: 9.5vh;}
+		.col-3{width: 32.5vw; margin: 0vh 0.5vw;}
+		.gap{margin: 1.4vh 1vw; justify-content: center;}
+
+
+		.absolutegraph{position: absolute;
+						top: 90vh; left: 1vw;
+						bottom: 0vh;
+						z-index: 7;}
+		.boxspace{margin: 0vh 0vw;}
+
+		#seoulImg{position: absolute; top: 13vh; left: 38vw;
+					max-width:100vw; height:auto;
+					transition: .2s ease;
+					filter: drop-shadow(0px 0px 7px rgba(0, 0, 0, 0.6));}
+		#seoulImg:hover{transform: rotate(20deg);
+						transition: .2s ease;}
+		@keyframes rotate {
+  			from {transform: rotate(20deg);}
+  			to {transform: rotate(380deg);}
+				}
+
+
+		.flex{display: flex;}
+		.relative{position: relative;}
+		.absolute{position:  absolute;}
+		.z1{z-index: 1;}
+		.z50{z-index: 50;}
+		.z50{z-index: 20;}
+		.outer{padding: 0vh 0vw;}
+		.inner{position: absolute;
+	  		bottom: 0vw; margin: 0vh 0vw; width: 32.5vw;}
+
+	  	.cursor {width: 20vw; height: 6vh; display: none; z-index: 30;}
+	
+	</style>
+</head>
+<body>
+	<!--/상단 타이포, 로고-->
+	<section>
+			<div class="subheader absolute">
+				<p>World Minimum Wage in 2021</p>
+				<p style ="font-family: 'Noto Sans', sans-serif; font-weight: 300;">세계 최저임금 비교</style></p>
+			</div>
+			<a href="index.html" class="logo absolute">
+				<img src="logo.svg">
+			</a>
+	</section>
+	<!--/seoul-->
+	<section>
+		<div id="header">SEOUL</div>
+		<div class="cursor">
+			<img src="seoulexp.svg">
+		</div>
+	</section>
+	<!--/scroll 영역-->
+	<section class="row z50">
+		<div id="seoulImg">
+			<img src="seoulimg.png" onmouseover="sound()" onmouseout="mute()">
+			<audio id= "seoulSnd" src="seoulSnd.mp3"></audio>
+		</div>  
+	</section>
+	<!--/하단 최저임금 인포-->
+	<section>
+		<section class="row absolutegraph z20">
+		<!--/인상날짜-->
+		<div class="col-3 outer">
+			<div class="inner">
+				<div class="gap">
+					<div class="row boxspace">
+						<h1>Effective Date</h1>
+						<h2>2021.1.1.</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/최저임금-->
+		<div class="col-3 outer">
+			<div class="inner">
+				<div class="gap">
+					<div class="boxspace">
+						<h3>Minimum Wage</h3>
+						<h4>₩8,720</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/인상률-->
+		<div class="col-3 outer">
+			<div class="inner">
+				<div class="gap">
+					<div class="row boxspace">
+						<h5></h5>
+						<h1 class="margintop">Rate of Increase
+							<br>- compared to 2020.1.1.</h1>
+						<h2>1.51% ↑
+							<br>₩440</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript">
+		//헤더 따라다니기
+		$("#header").on({
+            mousemove: (e) => {
+                $(".cursor").css({
+                      top: e.pageY+10 + "px",
+                    left: e.pageX+10 + "px",
+                    position:"absolute"
+                })
+            },
+            mouseover: (e) => {
+                $(".cursor").show();
+            },
+            mouseout: (e) => {
+                $(".cursor").hide();
+            }
+        });
+
+		//커피잔 소리
+
+		seoulSnd.volume = 0.05;
+		seoulSnd.currentTime = 0;
+
+       function sound(){document.getElementById("seoulSnd").play();}
+       function mute(){document.getElementById("seoulSnd").pause();}
+
+       //마우스 휠-스크롤
+       
+
+
+		/*scrollVert();
+		var scrollLeft=0;
+
+function scrollVert() {
+  $('html, body, section, *').off('mousewheel').mousewheel(function(e, delta) {
+    this.scrollTop -= (delta * 40);
+    e.preventDefault();
+    setTimeout(function() {
+      if ($(window).scrollTop() + $(window).height() == $(document).height())
+        scrollHoriz();
+    }, 0)
+
+  });
+}
+function scrollHoriz() {
+  $('html, body, section, *').off('mousewheel').mousewheel(function(e, delta) {
+    this.scrollLeft -= (delta * 40);
+    e.preventDefault();
+    scrollLeft=this.scrollLeft
+    setTimeout(function() {
+      if (scrollLeft == 0) scrollVert();
+    }, 0)
+  });
+}*/
+	</script>
+</body>
+</html>
